@@ -3,18 +3,14 @@ import React, { useEffect, useId, useState } from 'react'
 import CreateTaskPopup from '../task/create-task'
 import { Plus, X, CircleCheckBig } from 'lucide-react';
 import TaskCard from '../task/show-tasks'
-import axios from 'axios';
-import { BASE_URL } from '../../config/constants';
 import { useGetTask } from './operation.service'
 import { useDeleteTask, useUpdateTask, useGetSingleTask } from '../operations/operation.service'
-
 
 function Operations() {
     const [openDeleteModel, setOpenDeleteModel] = useState(false)
     const [confirmed, setConfirmed] = useState(false)
     const [userId, setUserId] = useState(null)
     const [open, setOpen] = useState(false)
-
 
     const { data: taskData } = useGetTask()
     const { data: singleTaskData } = useGetSingleTask(userId)
@@ -75,11 +71,6 @@ function Operations() {
             [name]: value
         }))
     }
-
-    console.log(userId);
-
-
-
 
     return (
         <div className='w-full bg-gray-200'>
