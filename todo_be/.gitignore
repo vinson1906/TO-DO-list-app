@@ -1,0 +1,4 @@
+#ignore the node_modules folder and .env files
+node_modules
+.env
+/src/generated/prisma

@@ -30,7 +30,7 @@
     "**/*.mts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/modules/operations/operations.jsx"  ],
   "exclude": [
     "node_modules"
   ]
