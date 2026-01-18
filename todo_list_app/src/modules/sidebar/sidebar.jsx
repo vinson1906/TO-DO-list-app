@@ -7,10 +7,6 @@ const Sidebar = () => {
         {
             lable: 'todo',
             icon: <Ticket />
-        },
-        {
-            lable: 'completed tasks',
-            icon: <Verified />
         }
     ]
 

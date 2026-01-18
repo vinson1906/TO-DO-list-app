@@ -51,7 +51,7 @@ function Operations() {
         if (confirmed) {
             deleteMutation.mutate(userId, {
                 onSuccess: () => {
-                    alert(`${id} dleted successfully`) //need to change this into toast package
+                    alert(`${id} dleted successfully`)
                     setUserId(null)
                 },
                 onError: () => {
@@ -104,7 +104,7 @@ function Operations() {
             <div className={`absolute top-[20%] left-[45%] right-[50%] ${open ? 'block' : 'hidden'} `} >
                 <div className='z-10 shadow-md'>
 
-                    <CreateTaskPopup form={form} saveform={saveform} setForm={setForm} open={open} setOpen={setOpen} mode={mode} />
+                    <CreateTaskPopup form={form} userId={userId} setUserId={setUserId} saveform={saveform} setForm={setForm} open={open} setOpen={setOpen} mode={mode} />
                 </div>
             </div>
             <div className='relative top-[50%] left-[50%] bottom-[50%] right-[50%] z-99 '>

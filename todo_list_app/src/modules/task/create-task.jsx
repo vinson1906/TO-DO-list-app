@@ -6,9 +6,11 @@ import React, { useState } from 'react'
 import { useCreateTask } from '../operations/operation.service'
 
 
-function CreateTaskPopup({ open, setOpen, form, setForm, saveform, mode }) {
+function CreateTaskPopup({ open, setOpen, form, userId,setUserId, setForm, saveform, mode }) {
 
     const useCreateMutate = useCreateTask()
+
+    console.log(userId,"user id for update");
 
     console.log(open);
 
@@ -39,7 +41,7 @@ function CreateTaskPopup({ open, setOpen, form, setForm, saveform, mode }) {
             <div>
                 <div className='bg-[#F5F2EA] h-fit w-[450px] px-5 pt-4 pb-5 rounded-md ' >
                     <div className='flex justify-end '>
-                        <button onClick={() => setOpen(prev => !prev)}>
+                        <button onClick={() => {setOpen(prev => !prev),setUserId(null)}}>
                             <X className='cursor-pointer' />
                         </button>
 
